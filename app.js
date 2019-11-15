@@ -158,6 +158,11 @@ if(err){res.send(err);}else{res.send("Successfully deleted");}
 //   });
 // });
 
+
+app.get("/", function(req,res){
+  res.render("home");
+});
+
 let port = process.env.PORT;
 if (port == null || port == "") {
   port = 3000;

@@ -1,1 +1,115 @@
-CAKE!
+<!doctype html>
+ <html lang="en">
+
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="RESTful API example">
+    <meta name="author" content="Phil Tate">
+
+
+
+
+  <link rel="icon" href="Images/favicon.ico">
+    <!--from bootstrap album template-->
+    <title>RESTful API example     </title>
+
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+
+    <!-- Bootstrap core CSS-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+    <!-- Custom styles for this template -->
+    <link href="\CSS\styles.css" rel="stylesheet">
+
+  </head>
+  <body >
+
+
+<div class="jumbotron">
+  <h1 class="text-center"><span style="color:red">REST</span> <span style="color:green">API</span> Example</h1>
+    <h4 class="text-center"><span style="color:red">RE</span>presentatioinal <span style="color:red">S</span>tate <span style="color:red">T</span>ransfer - <span style="color:green">A</span>pplication <span style="color:green">P</span>rogram <span style="color:green">I</span>nterface </h4>
+    <p class="pt-4  lead text-center">The table shows the rest API route architecture and commands. The table uses rest functionality to interact with a mongo atlas database.</p>
+    </div>
+<div class="container mb-5">
+    <table class="table table-dark  table-bordered text-center">
+      <thead>
+        <tr class=" table-light "style="color:black">
+          <th scope="col" >REST Commands</th>
+          <th scope="col">"/articles" route </th>
+          <th scope="col">/articles/SpecificArticle" route</th>
+          <!-- <th scope="col"><div style="display:flex">"/articles/SpecificArticle" route </div>  <small style="display:flex">*If inputting a space use "%20" instead</small></th> -->
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row" class="bg-primary">
+            GET
+
+          </th>
+          <td><form><button type="button" class="btn btn-primary btn-block">Fetch all articles</button></form> </td>
+          <td class="text-success">Included</td>
+
+        </tr>
+        <tr>
+          <th scope="row" class="bg-success">
+        POST
+
+          </th>
+          <td><a class="text-warning" href="/docs/4.3/layout/grid/">Only grid system</a></td>
+          <td class="text-success">Included</td>
+
+
+        </tr>
+        <tr>
+          <th scope="row" style="background:orange">
+        PUT
+
+          </th>
+          <td class="text-success">Included</td>
+
+          <td><a class="text-warning" href="/docs/4.3/content/reboot/">Only Reboot</a></td>
+
+        </tr>
+        <tr>
+          <th scope="row" class="bg-warning">
+        PATCH
+
+          </th>
+          <td class="text-success">Included</td>
+
+          <td><a class="text-warning" href="/docs/4.3/content/reboot/">Only Reboot</a></td>
+
+        </tr>
+        <tr>
+          <th scope="row" class="bg-danger">
+DELETE
+
+          </th>
+          <td class="text-success">Included</td>
+
+          <td><a class="text-warning" href="/docs/4.3/content/reboot/">Only Reboot</a></td>
+
+        </tr>
+      </tbody>
+    </table>
+
+    <small >This example is deliberately simple so that it shows clearly the REST api. After making changes to the data press "GET" to see the changes. If you would like to see the data returned in an more legiable form chrome tools json viewer is a useful addon.  </small>
+
+</div>
+
+<div class="jumbotron"><button type="button" class="btn btn-primary btn-lg btn-block">Re-add a copy of the original data</button></div>
+</div>
+    <script src="https://code.jquery.com/jquery-3.4.0.js" integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+
+  </body>
+</html>
