@@ -34,25 +34,32 @@
     <h4 class="text-center"><span style="color:red">RE</span>presentatioinal <span style="color:red">S</span>tate <span style="color:red">T</span>ransfer - <span style="color:green">A</span>pplication <span style="color:green">P</span>rogram <span style="color:green">I</span>nterface </h4>
     <p class="pt-4  lead text-center">The table shows the rest API route architecture and commands. The table uses rest functionality to interact with a mongo atlas database.</p>
     </div>
-<div class="container mb-5">
-    <table class="table table-dark  table-bordered text-center">
+<div class="container mb-5 w-75">
+    <table class="table table-dark  table-bordered text-center w-100">
       <thead>
-        <tr class=" table-light "style="color:black">
-          <th scope="col" >REST Commands</th>
-          <th scope="col">"/articles" route </th>
-          <th scope="col">/articles/SpecificArticle" route</th>
+        <tr class=" table-light w-100"style="color:black">
+          <th scope="col " >REST Commands</th>
+          <th scope="col" class="w-50">"/articles" route </th>
+          <th scope="col" class="w-50">/articles/SpecificArticle" route</th>
           <!-- <th scope="col"><div style="display:flex">"/articles/SpecificArticle" route </div>  <small style="display:flex">*If inputting a space use "%20" instead</small></th> -->
 
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr >
           <th scope="row" class="bg-primary">
             GET
 
           </th>
-          <td><form><button type="button" class="btn btn-primary btn-block">Fetch all articles</button></form> </td>
-          <td class="text-success">Included</td>
+          <td><form action="/articles" method="GET"><button type="submit" class="btn btn-primary btn-block">Fetch all articles</button></form> </td>
+          <td class="w-100">
+            <form action="/articles/" method="GET" class="form-inline w-100">
+            <div class="form-group w-50">
+
+<input type="text" name="articleTitle" value="API" required id="getAnArticleTextInput" class="form-control w-100"></div>
+<div class="w-50" ><button type="submit" class="btn  btn-primary btn-block w-100" id="submitForGetAnArticleInput">Fetch specific article</button></div>
+</form>
+</td>
 
         </tr>
         <tr>
@@ -110,6 +117,6 @@ DELETE
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 
-
+  <script src="Javascript/functionality.js" charset="utf-8"></script>
   </body>
 </html>

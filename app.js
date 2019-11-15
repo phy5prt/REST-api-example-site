@@ -63,7 +63,7 @@ app.route("/articles/:articleTitle")
 .get(function(req,res){
 
   Article.findOne({title: req.params.articleTitle},function(err, foundArticle){
-if(foundArticle){res.send(foundArticle);}else{res.send("No article found");}
+if(foundArticle){res.send(foundArticle);}else{res.send("No article called " + req.params.articleTitle + " found!!!");}
    });
 
 }
