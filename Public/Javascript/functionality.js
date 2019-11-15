@@ -20,4 +20,7 @@ $('#patchReplaceContentInput').prop('disabled', true).css({"background":"inherit
 $('#patchReplaceTitleInput').prop('disabled', false).css({"background":"white"}).val('articles new title');
 }});
 
+
+
+$("#optionTitleLable").click();
 // $('body').css({"background":"red"});
