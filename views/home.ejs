@@ -11,7 +11,6 @@
 
 
 
-  <link rel="icon" href="Images/favicon.ico">
     <!--from bootstrap album template-->
     <title>RESTful API example     </title>
 
@@ -34,10 +33,10 @@
     <h4 class="text-center"><span style="color:red">RE</span>presentatioinal <span style="color:red">S</span>tate <span style="color:red">T</span>ransfer - <span style="color:green">A</span>pplication <span style="color:green">P</span>rogram <span style="color:green">I</span>nterface </h4>
     <p class="pt-4  lead text-center">The table shows the rest API route architecture and commands. The table uses rest functionality to interact with a mongo atlas database.</p>
     </div>
-<div class="container mb-5 w-75">
-    <table class="table table-dark  table-bordered text-center w-100">
+<div class="container mb-5 ">
+    <table class="table table-dark  table-bordered text-center ">
       <thead>
-        <tr class=" table-light w-100"style="color:black">
+        <tr class=" table-light "style="color:black">
           <th scope="col " >REST Commands</th>
           <th scope="col" class="w-50">"/articles" route </th>
           <th scope="col" class="w-50">/articles/SpecificArticle" route</th>
@@ -56,7 +55,7 @@
             <form action="/articles/" method="GET" class="form-inline w-100">
             <div class="form-group w-50">
 
-<input type="text" name="articleTitle" value="API" required id="getAnArticleTextInput" class="form-control w-100"></div>
+<input type="text" name="articleTitle" value="API" required id="getAnArticleTitleInput" class="form-control w-100"></div>
 <div class="w-50" ><button type="submit" class="btn  btn-primary btn-block w-100" id="submitForGetAnArticleInput">Fetch specific article</button></div>
 </form>
 </td>
@@ -67,8 +66,14 @@
         POST
 
           </th>
-          <td><a class="text-warning" href="/docs/4.3/layout/grid/">Only grid system</a></td>
-          <td class="text-success">Included</td>
+          <td>  <form action="/articles/" method="post" class="form-inline w-100">
+            <div class="form-group w-100">
+
+<input type="text" name="articleTitle" value="new article's title" required id="postAnArticleTitleInput" class="form-control w-25">
+<input type="text" name="articleContent" value="new article's content" required id="postAnArticleContentInput" class="form-control w-50">
+<button type="submit" class="btn  btn-success btn-block form-control w-25" id="submitForPostAnArticleInput">Insert new article</button></div>
+</form></td>
+          <td class="text-warning">N/A</td>
 
 
         </tr>
@@ -77,19 +82,51 @@
         PUT
 
           </th>
-          <td class="text-success">Included</td>
+    <td class="text-warning">N/A</td>
 
-          <td><a class="text-warning" href="/docs/4.3/content/reboot/">Only Reboot</a></td>
+          <td><form action="/articles/" method="put" class="form-inline w-100">
+            <div class="form-group w-100">
+
+<input type="text" name="oldArticleTitle" value=" article to replace's title" required id="putAnArticleToReplaceTitleInput" class="form-control w-50">
+<input type="text" name="newArticleTitle" value=" article's new title" required id="putReplaceTitleInput" class="form-control w-50"></div>
+<div class="form-group w-100">
+<input type="text" name="newArticleContent" value="article's new content" required id="putReplaceContentInput" class="form-control w-50">
+<button type="submit" class="btn   btn-block form-control w-50" style="background:orange;" id="submitForPutAnArticleInput">replace article with it's update</button></div>
+</div></form></td>
 
         </tr>
         <tr>
           <th scope="row" class="bg-warning">
         PATCH
 
-          </th>
-          <td class="text-success">Included</td>
 
-          <td><a class="text-warning" href="/docs/4.3/content/reboot/">Only Reboot</a></td>
+
+
+          </th>
+                <td class="text-warning">N/A</td>
+
+          <td><form action="/articles/" method="patch" class="form-inline w-100">
+<input type="text" name="oldArticleTitle" value=" article to replace's title" required id="patchArticleToPatchTitleInput" class="form-control w-100">
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+
+
+
+
+    <div class="form-group w-50 btn-group-toggle">
+
+      <label class="btn btn-secondary btn-block "   id="optionTitleLable">
+        <input type="radio" name="options" id="optionTitle" autocomplete="off" checked > Change title
+      </label>
+<input type="text" name="newArticleTitle" value=" article's new title" required id="patchReplaceTitleInput" class="form-control w-100">
+</div>
+<div class=" form-group  w-50 btn-group-toggle">
+  <label class="btn btn-secondary btn-block "id="optionContentLable">
+    <input type="radio" name="options" id="optionContent" autocomplete="off"> Or content
+  </label>
+<input type="text" name="newArticleContent" value="article's new content" required id="patchReplaceContentInput" class="form-control w-100">
+</div></div>
+<button type="submit" class="btn  btn-warning btn-block form-control w-100" id="submitForPutAnArticleInput">replace article element with it's updated element</button></div>
+</div></form></td>
 
         </tr>
         <tr>
