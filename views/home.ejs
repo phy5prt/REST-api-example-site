@@ -134,9 +134,16 @@
 DELETE
 
           </th>
-          <td class="text-success">Included</td>
+          <td ><form action="/articles" method="DELETE"><button type="submit" class="btn btn-danger btn-block">Delete all articles</button></form> </td>
+          <td class="w-100">
+            <form action="/articles/" method="GET" class="form-inline w-100">
+            <div class="form-group w-50">
 
-          <td><a class="text-warning" href="/docs/4.3/content/reboot/">Only Reboot</a></td>
+<input type="text" name="articleTitle" value="API" required id="deleteAnArticleTitleInput" class="form-control w-100"></div>
+<div class="w-50" ><button type="submit" class="btn  btn-danger btn-block w-100" id="submitForDeleteAnArticleInput">Delete specific article</button></div>
+</form></td>
+
+
 
         </tr>
       </tbody>
