@@ -1,4 +1,5 @@
 //jshint esversion:6
+require("dotenv").config();
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const express = require("express");
@@ -157,6 +158,13 @@ if(err){res.send(err);}else{res.send("Successfully deleted");}
 //   });
 // });
 
-app.listen(3000,function(){
-  console.log("Server started on port 3000");
-});
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
+app.listen(port);
+
+//
+// app.listen(3000,function(){
+//   console.log("Server started on port 3000");
+// });
