@@ -66,6 +66,7 @@ app.route("/articles/:articleTitle")
 
   Article.findOne({title: req.params.articleTitle}, function(err, foundArticle){
     if (foundArticle) {
+      // res.send(foundArticle);
       res.send(foundArticle);
     } else {
       res.send("No articles matching the title: "+req.params.articleTitle+" was found.");
@@ -97,13 +98,13 @@ Article.update(
 );
 
 })
-
+//does not error if no such article to update
 .patch(function(req,res){
   Article.updateOne(
     {title:req.params.articleTitle},
     {$set: req.body},
     function(err){
-      if(err){res.send(err);}else{res.send("Succesfully updated the article");}
+      if(err){res.send(err);}else{res.send("Succesfully updated the article (if it existed)");}
 
     }
   );
