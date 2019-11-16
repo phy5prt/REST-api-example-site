@@ -27,6 +27,16 @@ $("#optionTitleLable").click();
 
 ////////////////////////////////////////////////////////// GET  //////////////////////////////
 
+//dont know how to make get just work fusing just form html and setting with params should be possible but isnt working
+//potential because restapi not set up in that way and want it to be as it is so hence this
+
+
+var initialRoute = $('#getArticleform').attr('action');
+$('#getArticleform').submit(function(){
+
+  $(this).attr('action', initialRoute +  $('#getSpecificArticle').val());
+});
+
 //////////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!             POST   //////////////////
 
 function postArticleAjax(theArticle){

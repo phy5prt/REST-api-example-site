@@ -75,6 +75,14 @@ app.route("/articles/:articleTitle")
 })
 
 .put(function(req,res){
+
+//code to check it exists
+Article.findOne({title: req.params.articleTitle}, function(err, foundArticle){
+  if (!foundArticle) {res.send("No articles matching the title: "+req.params.articleTitle+" was found.");
+}else{
+
+
+  //put code
 Article.update(
   //condition
   {
@@ -97,9 +105,21 @@ Article.update(
 
 );
 
+
+
+}});
 })
-//does not error if no such article to update
+
 .patch(function(req,res){
+
+
+  //code to check it exists
+  Article.findOne({title: req.params.articleTitle}, function(err, foundArticle){
+    if (!foundArticle) {res.send("No articles matching the title: "+req.params.articleTitle+" was found.");
+  }else{
+
+
+  ///patch code
   Article.updateOne(
     {title:req.params.articleTitle},
     {$set: req.body},
@@ -108,16 +128,28 @@ Article.update(
 
     }
   );
+
+}});
 })
 
 
 .delete(function(req,res){
+
+  //code to check it exists
+  Article.findOne({title: req.params.articleTitle}, function(err, foundArticle){
+    if (!foundArticle) {res.send("No articles matching the title: "+req.params.articleTitle+" was found.");
+  }else{
+
+
 Article.deleteOne({title:req.params.articleTitle}, function(err){
+
+
+
 
 if(err){res.send(err);}else{res.send("Successfully deleted");}
 
 });
-
+}});
 });
 
 

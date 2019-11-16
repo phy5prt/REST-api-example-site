@@ -31,7 +31,7 @@
   <body >
 
     <!-- just for testing!!!!!!!! -->
-    <button class=" btn btn-warning btn-block" id="test" value="API">Test</button>
+    <!-- <button class=" btn btn-warning btn-block" id="test" value="API">Test</button> -->
 
 
 
@@ -67,14 +67,14 @@
             GET
 
           </th>
-          <td><form action="/articles" method="GET"><button type="submit" class="btn btn-primary btn-block">Fetch all articles</button></form> </td>
+          <td><form action="/articles" method="GET" target="_blank"><button type="submit" class="btn btn-primary btn-block">Fetch all articles</button></form> </td>
           <td class="w-100">
             <!-- <form action="/articles/API" method="GET" class="form-inline w-100">  -->
           <!-- <form action="/articles/?params=articleTitle" method="GET" class="form-inline w-100">  -->
-          <form action="/articles/param?query=value" method="GET" class="form-inline w-100">
+          <form action="/articles/" method="GET" class="form-inline w-100" target="_blank" id="getArticleform">
             <div class="form-group w-50">
 
-<input type="text" name="articleTitle" value="API" required id="getAnArticleTitleInput" class="form-control w-100"></div>
+<input type="text" name="articleTitle" value="article's title" required id="getSpecificArticle" class="form-control w-100"></div>
 <div class="w-50" ><button type="submit" class="btn  btn-primary btn-block w-100" id="submitForGetAnArticleInput">Fetch specific article</button></div>
 </form>
 </td>
@@ -164,7 +164,7 @@ DELETE
             <form action="/articles/" method="GET" class="form-inline w-100" id="deleteArticleForm">
             <div class="form-group w-50">
 
-<input type="text" name="articleTitle" value="API" required id="deleteArticle" class="form-control w-100"></div>
+<input type="text" name="articleTitle" value="article's title" required id="deleteArticle" class="form-control w-100"></div>
 <div class="w-50" ><button type="submit" class="btn  btn-danger btn-block w-100" id="submitForDeleteAnArticleInput">Delete specific article</button></div>
 </form></td>
 
