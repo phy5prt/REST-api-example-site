@@ -165,13 +165,13 @@ $.ajax({
    dataType:"json",
     success: function(result)
     {
-      alert(result);
+
       alert(JSON.stringify(result));
 
 
 },
 error:function(result)  {
-    alert(result);
+
     alert(JSON.stringify(result));
 
 
@@ -187,13 +187,13 @@ function deleteAllArticlesAjax(){
      dataType:"json",
       success: function(result)
       {
-        alert(result);
+
         alert(JSON.stringify(result));
 
 
   },
   error:function(result)  {
-      alert(result);
+
       alert(JSON.stringify(result));
 
 
@@ -215,13 +215,13 @@ function deleteAllArticlesAjax(){
      dataType:"json",
       success: function(result)
       {
-        alert(result);
+
         alert(JSON.stringify(result));
 
 
   },
   error:function(result)  {
-      alert(result);
+
       alert(JSON.stringify(result));
 
 
@@ -237,6 +237,60 @@ postArticleAjax(value.title,value.content);
 });
 
 };
+
+//hijack submit from post
+$(function () {
+  $("#postForm").on('submit', function (submitClick) {
+alert("hijacked");
+console.log("hijacked");
+var formData = $(this).serialize();
+var url = "http://localhost:3000/articles/";
+
+$.ajax({
+     type: "POST",
+     url: url,
+     data: formData,
+     success: function (data) {
+
+  alert(JSON.stringify(data));
+     $('#getAnArticleTitleInput').focus();
+      $(this)[0].reset();
+      }
+
+
+    });
+    return false;
+
+   }
+  )
+});
+
+
+//
+// $(function () {
+//   $('#contact-form').on('submit', function (submitClick) {
+//
+//     var url = "https://strong-albatross.prod.with-datafire.io/contact";
+//
+//     $.ajax({
+//      type: "POST",
+//      url: url,
+//      data: $(this).serialize(),
+//      success: function (data) {
+//
+//   alert(data);
+//      $('#firstInput').focus(); // focus on first box so submit loses focus
+//        $('#contact-form')[0].reset()
+//       }
+//
+//     });
+//     return false;
+//
+//    }
+//   )
+// });
+
+
 
 // function getArticle(){
 // $.ajax({
