@@ -92,92 +92,42 @@ error:function(result)  {
 });
 }
 
-function postArticleAjax(title,content){
-
-$.ajax({
-
-    type:"post",                   //"PATCH",
-    url: "http://localhost:3000/articles/",
-  data: {
-    title:title,
-    content:content
-  },
-   dataType:"json",
-    success: function(result)
-    {
-      alert(result);
-      alert(JSON.stringify(result));
 
 
-},
-error:function(result)  {
-    alert(result);
-    alert(JSON.stringify(result));
 
-
-}
-});
-}
-
-function putArticleAjax(articleToReplace,titleReplacement,contentReplacement){
-
-$.ajax({
-
-    type:"put",                   //"PATCH",
-    url: "http://localhost:3000/articles/"+articleToReplace,
-  data: {
-    title:titleReplacement,
-    content:contentReplacement
-  },
-   dataType:"json",
-    success: function(result)
-    {
-      alert(result);
-      alert(JSON.stringify(result));
-
-
-},
-error:function(result)  {
-    alert(result);
-    alert(JSON.stringify(result));
-
-
-}
-});
-}
 
 //if a var left blank it works
 //if remove value and then run this get empty string var contentReplacement = $("#test").val();
 //if link to disable value it just doesnt work at all var contentReplacement = $("#test").val();
-function patchArticleAjax(articleToReplace,titleReplacement,contentReplacement){
-
-
-
-
-$.ajax({
-
-    type:"patch",                   //"PATCH",
-    url: "http://localhost:3000/articles/"+articleToReplace,
-  data: {
-    title:titleReplacement,
-    content:contentReplacement
-  },
-   dataType:"json",
-    success: function(result)
-    {
-
-      alert(JSON.stringify(result));
-
-
-},
-error:function(result)  {
-
-    alert(JSON.stringify(result));
-
-
-}
-});
-}
+// function patchArticleAjax(articleToReplace,titleReplacement,contentReplacement){
+//
+//
+//
+//
+// $.ajax({
+//
+//     type:"patch",                   //"PATCH",
+//     url: "http://localhost:3000/articles/"+articleToReplace,
+//   data: {
+//     title:titleReplacement,
+//     content:contentReplacement
+//   },
+//    dataType:"json",
+//     success: function(result)
+//     {
+//
+//       alert(JSON.stringify(result));
+//
+//
+// },
+// error:function(result)  {
+//
+//     alert(JSON.stringify(result));
+//
+//
+// }
+// });
+// }
 
 function deleteAllArticlesAjax(){
   $.ajax({
@@ -229,59 +179,26 @@ function deleteAllArticlesAjax(){
   });
   }
 
-function   repopulateWithAjaxPut(repopulationData){
-deleteAllArticlesAjax();
-$.each(repopulationData, function(index, value){
-
-postArticleAjax(value.title,value.content);
-});
-
-};
-
-//hijack submit from post
-$(function () {
-  $("#postForm").on('submit', function (submitClick) {
-alert("hijacked");
-console.log("hijacked");
-var formData = $(this).serialize();
-var url = "http://localhost:3000/articles/";
-
-$.ajax({
-     type: "POST",
-     url: url,
-     data: formData,
-     success: function (data) {
-
-  alert(JSON.stringify(data));
-     $('#getAnArticleTitleInput').focus();
-      $(this)[0].reset();
-      }
 
 
-    });
-    return false;
-
-   }
-  )
-});
-
-
-//
+//hijack submit from post this works
 // $(function () {
-//   $('#contact-form').on('submit', function (submitClick) {
+//   $("#postForm").on('submit', function (submitClick) {
 //
-//     var url = "https://strong-albatross.prod.with-datafire.io/contact";
+// var formData = $(this).serialize();
+// var url = "http://localhost:3000/articles/";
 //
-//     $.ajax({
+// $.ajax({
 //      type: "POST",
 //      url: url,
-//      data: $(this).serialize(),
+//      data: formData,
 //      success: function (data) {
 //
-//   alert(data);
-//      $('#firstInput').focus(); // focus on first box so submit loses focus
-//        $('#contact-form')[0].reset()
+//   alert(JSON.stringify(data));
+//      $('#getAnArticleTitleInput').focus();
+//       $(this)[0].reset();
 //       }
+//
 //
 //     });
 //     return false;
@@ -290,19 +207,6 @@ $.ajax({
 //   )
 // });
 
-
-
-// function getArticle(){
-// $.ajax({
-//     type:"GET",                   //"PATCH",
-//     url: "http://localhost:3000/articles/API",
-//     data: {page_items:page_items, page_name: 'test_page'},
-//     success: function(returned_data)
-//     {
-//         console.log(returned_data);
-//     }
-// });
-//}
 
 //try this
 // alert("Name: " + nameSubmitted.value);
@@ -321,14 +225,6 @@ $.ajax({
 //                 });
 
 
-//try this
-// $.ajax({
-//      url: api_url + "?key=" + key + " &q=" + $( this ).text(),
-//      contentType: "application/json",
-//      dataType: 'json',
-//      success: function(result){
-//          console.log(result);
-//      }
 
 // try this
 //Look in bootstrap website for the button that submits on contact form it is intercepted by ajax

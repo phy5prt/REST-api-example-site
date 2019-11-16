@@ -1,4 +1,7 @@
 <!doctype html>
+
+<!--didnt know html doesnt do patch etc so used html forms maybe better direct ajax way had i known as the action method isnt used ajax does most forms functionality -->
+
  <html lang="en">
 
 
@@ -102,11 +105,11 @@
     <td class="text-warning">N/A</td>
 
           <td>
-              <form action="/articles/A" method="PUT" class="form-inline w-100">
+              <form  id="putForm" action="/articles/" method="Put" class="form-inline w-100" >
             <!-- <form action="/articles/ " method="put" class="form-inline w-100"> -->
             <div class="form-group w-100">
 
-<input type="text" name="articleTitle" value=" article to replace's title" required id="putAnArticleToReplaceTitleInput" class="form-control w-50">
+<input type="text" name="existingArticleTitle" value=" article to replace's title" required id="putArticleToReplace" class="form-control w-50">
 <input type="text" name="title" value=" article's new title" required id="putReplaceTitleInput" class="form-control w-50"></div>
 <div class="form-group w-100">
 <input type="text" name="content" value="article's new content" required id="putReplaceContentInput" class="form-control w-50">
@@ -124,8 +127,8 @@
           </th>
                 <td class="text-warning">N/A</td>
 
-          <td><form action="/articles/?articleTitle" method="patch" class="form-inline w-100">
-<input type="text" name="articleTitle" value=" article to replace's title" required id="patchArticleToPatchTitleInput" class="form-control w-100">
+          <td><form action="/articles/" method="patch" id="patchForm" class="form-inline w-100">
+<input type="text" name="articleTitle" value=" article to replace's title" required id="patchArticleToPatch" class="form-control w-100">
 <hr style="width: 100%; color: black; height: 1px; background-color:grey;" />
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
 
@@ -175,7 +178,7 @@ DELETE
 
 </div>
 
-<div class="jumbotron"><button type="button" class="btn btn-primary btn-lg btn-block">Re-add a copy of the original data</button></div>
+<div class="jumbotron"><button type="button" class="btn btn-primary btn-lg btn-block" onclick="repopulateWithAjaxPut(repopulationData)">Re-add a copy of the original data</button></div>
 </div>
     <script src="https://code.jquery.com/jquery-3.4.0.js" integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
