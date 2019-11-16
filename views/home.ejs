@@ -60,7 +60,9 @@
           </th>
           <td><form action="/articles" method="GET"><button type="submit" class="btn btn-primary btn-block">Fetch all articles</button></form> </td>
           <td class="w-100">
-            <form action="/articles/" method="GET" class="form-inline w-100">
+            <!-- <form action="/articles/API" method="GET" class="form-inline w-100">  -->
+          <!-- <form action="/articles/?params=articleTitle" method="GET" class="form-inline w-100">  -->
+          <form action="/articles/param?query=value" method="GET" class="form-inline w-100">
             <div class="form-group w-50">
 
 <input type="text" name="articleTitle" value="API" required id="getAnArticleTitleInput" class="form-control w-100"></div>
@@ -74,14 +76,13 @@
         POST
 
           </th>
-          <td>  <form action="/articles/" method="post" class="form-inline w-100">
-            <div class="form-group w-100">
+          <td>  <form action="/articles/ " method="post" class="form-inline w-100">
 
-<input type="text" name="articleTitle" value="new article's title" required id="postAnArticleTitleInput" class="form-control w-50">
-<input type="text" name="articleContent" value="new article's content" required id="postAnArticleContentInput" class="form-control w-50">
-</div>
-  <div class="form-group w-100">
-<button type="submit" class="btn  btn-success btn-block form-control w-100" id="submitForPostAnArticleInput">Insert new article</button></div>
+
+<input type="text" name="title" value="new article's title" required id="postAnArticleTitleInput" class="form-control w-50">
+<input type="text" name="content" value="new article's content" required id="postAnArticleContentInput" class="form-control w-50">
+
+<button type="submit" class="btn  btn-success btn-block form-control w-100" id="submitForPostAnArticleInput">Insert new article</button>
 </form></td>
           <td class="text-warning">N/A</td>
 
@@ -94,13 +95,15 @@
           </th>
     <td class="text-warning">N/A</td>
 
-          <td><form action="/articles/" method="put" class="form-inline w-100">
+          <td>
+              <form action="/articles/A" method="PUT" class="form-inline w-100">
+            <!-- <form action="/articles/ " method="put" class="form-inline w-100"> -->
             <div class="form-group w-100">
 
-<input type="text" name="oldArticleTitle" value=" article to replace's title" required id="putAnArticleToReplaceTitleInput" class="form-control w-50">
-<input type="text" name="newArticleTitle" value=" article's new title" required id="putReplaceTitleInput" class="form-control w-50"></div>
+<input type="text" name="articleTitle" value=" article to replace's title" required id="putAnArticleToReplaceTitleInput" class="form-control w-50">
+<input type="text" name="title" value=" article's new title" required id="putReplaceTitleInput" class="form-control w-50"></div>
 <div class="form-group w-100">
-<input type="text" name="newArticleContent" value="article's new content" required id="putReplaceContentInput" class="form-control w-50">
+<input type="text" name="content" value="article's new content" required id="putReplaceContentInput" class="form-control w-50">
 <button type="submit" class="btn   btn-block form-control w-50" style="background:orange;" id="submitForPutAnArticleInput">replace article with it's update</button></div>
 </div></form></td>
 
@@ -115,8 +118,8 @@
           </th>
                 <td class="text-warning">N/A</td>
 
-          <td><form action="/articles/" method="patch" class="form-inline w-100">
-<input type="text" name="oldArticleTitle" value=" article to replace's title" required id="patchArticleToPatchTitleInput" class="form-control w-100">
+          <td><form action="/articles/?articleTitle" method="patch" class="form-inline w-100">
+<input type="text" name="articleTitle" value=" article to replace's title" required id="patchArticleToPatchTitleInput" class="form-control w-100">
 <hr style="width: 100%; color: black; height: 1px; background-color:grey;" />
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
 
@@ -129,13 +132,13 @@
 
         <input type="radio"  id="optionTitle" autocomplete="off" checked > Change title
       </label>
-<input type="text" name="newArticleTitle" value=" article's new title" required id="patchReplaceTitleInput" class="form-control w-100">
+<input type="text" name="title" value=" article's new title" required id="patchReplaceTitleInput" class="form-control w-100">
 </div>
 <div class=" form-group  w-50 btn-group-toggle">
   <label class="btn btn-secondary btn-block "id="optionContentLable">
     <input type="radio"  id="optionContent" autocomplete="off"> Or content
   </label>
-<input type="text" name="newArticleContent" value="article's new content" required id="patchReplaceContentInput" class="form-control w-100">
+<input type="text" name="content" value="article's new content" required id="patchReplaceContentInput" class="form-control w-100">
 </div></div>
 <hr style="width: 100%; color: black; height: 1px; background-color:grey;" />
 <button type="submit" class="btn  btn-warning btn-block form-control w-100" id="submitForPutAnArticleInput">replace article element with it's updated element</button></div>
