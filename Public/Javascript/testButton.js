@@ -126,59 +126,59 @@ error:function(result)  {
 //
 //
 // }
-// });
-// }
-
-function deleteAllArticlesAjax(){
-  $.ajax({
-      type:"DELETE",                   //"PATCH",
-      url: "http://localhost:3000/articles/",
-    //  data: {},
-     dataType:"json",
-      success: function(result)
-      {
-
-        alert(JSON.stringify(result));
-
-
-  },
-  error:function(result)  {
-
-      alert(JSON.stringify(result));
-
-
-  }
-  });
-  }
-
-
-  function deleteSpecificArticleAjax(articleToDelete){
-
-  $.ajax({
-
-      type:"delete",                   //"PATCH",
-      url: "http://localhost:3000/articles/"+articleToDelete,
-    // data: {
-    //   title:titleReplacement,
-    //   content:contentReplacement
-    // },
-     dataType:"json",
-      success: function(result)
-      {
-
-        alert(JSON.stringify(result));
-
-
-  },
-  error:function(result)  {
-
-      alert(JSON.stringify(result));
-
-
-  }
-  });
-  }
-
+// // });
+// // }
+//
+// function deleteAllArticlesAjax(){
+//   $.ajax({
+//       type:"DELETE",                   //"PATCH",
+//       url: "http://localhost:3000/articles/",
+//     //  data: {},
+//      dataType:"json",
+//       success: function(result)
+//       {
+//
+//         alert(JSON.stringify(result));
+//
+//
+//   },
+//   error:function(result)  {
+//
+//       alert(JSON.stringify(result));
+//
+//
+//   }
+//   });
+//   }
+//
+//
+//   function deleteSpecificArticleAjax(articleToDelete){
+//
+//   $.ajax({
+//
+//       type:"delete",                   //"PATCH",
+//       url: "http://localhost:3000/articles/"+articleToDelete,
+//     // data: {
+//     //   title:titleReplacement,
+//     //   content:contentReplacement
+//     // },
+//      dataType:"json",
+//       success: function(result)
+//       {
+//
+//         alert(JSON.stringify(result));
+//
+//
+//   },
+//   error:function(result)  {
+//
+//       alert(JSON.stringify(result));
+//
+//
+//   }
+//   });
+//   }
+//
 
 
 //hijack submit from post this works

@@ -130,8 +130,6 @@ putArticleAjax($(this).serialize());
 
 function patchArticleAjax(submitData){
 
-alert($("#patchArticleToPatch").val());
-alert(JSON.stringify(submitData));
 
 $.ajax({
     type:"patch",
@@ -175,3 +173,66 @@ patchArticleAjax($(this).serialize());
 
 
 //////////////////////////////////////////////// DELETE ///////////////////////////////////////
+
+function deleteAllArticlesAjax(){
+
+
+$.ajax({
+    type:"delete",
+    url: "http://localhost:3000/articles/", //if i dont do this hack need to somehow deserialize data and turn in javascript object
+
+    success: function(result)
+    {
+
+      alert(JSON.stringify(result));
+      $('#getAnArticleTitleInput').focus();
+        $("form").each(function(i){$(this)[0].reset();});
+},
+error:function(result)  {
+
+    alert(JSON.stringify(result));
+    $('#getAnArticleTitleInput').focus();
+    $("form").each(function(i){$(this)[0].reset();});
+}
+});
+}
+
+function deleteSpecificArticleAjax(){
+
+
+$.ajax({
+    type:"delete",
+    url: "http://localhost:3000/articles/"+$("#deleteArticle").val(), //if i dont do this hack need to somehow deserialize data and turn in javascript object
+
+    success: function(result)
+    {
+
+      alert(JSON.stringify(result));
+      $('#getAnArticleTitleInput').focus();
+        $("form").each(function(i){$(this)[0].reset();});
+},
+error:function(result)  {
+
+    alert(JSON.stringify(result));
+    $('#getAnArticleTitleInput').focus();
+    $("form").each(function(i){$(this)[0].reset();});
+}
+});
+}
+
+
+//hijack submit from patch this works
+
+$(function () {
+  $("#deleteArticleForm").on('submit', function (submitClick) {
+deleteSpecificArticleAjax();
+    return false;
+  });
+});
+
+$(function(){
+  $("#deleteAllArticlesForm").on('submit', function (submitClick) {
+deleteAllArticlesAjax();
+    return false;
+  });
+});
