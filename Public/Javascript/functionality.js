@@ -70,6 +70,7 @@ postArticleAjax($(this).serialize());
 
 
 function   repopulateWithAjaxPut(repopulationData){
+  alert("About to deleteAll and run mutliple PUTs there will be several more alerts");
 deleteAllArticlesAjax();
 $.each(repopulationData, function(index, value){
 
