@@ -122,6 +122,7 @@ $(function () {
 
 
   $("#putForm").on('submit', function (submitClick) {
+e.PreventDefault(); //trying this to stop the error {"readyState":0,"status":0,"statusText":"error"}
 putArticleAjax($(this).serialize());
     return false;
 
