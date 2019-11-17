@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static("public"));
 
 
-mongoose.connect("mongodb://localhost:27017/wikiDB", {useNewUrlParser:true});
+mongoose.connect("mongodb+srv://phy5prtAdmin:"+process.env.PASSWORD_ATLASDB+"@cluster0-su305.mongodb.net/wikiDB", {useNewUrlParser:true});
 
 const articleSchema={
 title: String,

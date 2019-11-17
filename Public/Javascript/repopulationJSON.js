@@ -30,7 +30,14 @@ var repopulationData=[
 
 {
 
-    title : "Jack Bauer",
-    content : "Jack Bauer once stepped into quicksand. The quicksand couldn't escape and nearly drowned."
+    title : "This website",
+    content : "This website uses html forms, to enable put patch delete ajax is used, the backend is node.js, the database mongodb atlas."
 
-}]
+},
+{
+
+    title : "The rest code looks like this",
+    content : " app.route('/articles/:articleTitle').get(function(req, res){Article.findOne({title: req.params.articleTitle}, function(err, foundArticle){if (foundArticle) {res.send(foundArticle);} else {res.send('No articles matching the title: '+req.params.articleTitle+' was found.');}});})"
+
+}
+]
