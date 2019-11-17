@@ -92,7 +92,9 @@ function putArticleAjax(submitData){
 
 $.ajax({
     type:"put",
-    url: "http://localhost:3000/articles/"+$("#putArticleToReplace").val(), //if i dont do this hack need to somehow deserialize data and turn in javascript object
+    url: "/articles/"+$("#putArticleToReplace").val(), //if i dont do this hack need to somehow deserialize data and turn in javascript object
+async:true,
+crossDomain:true,
   data: submitData,
    dataType:"json",
     success: function(result)
