@@ -101,7 +101,7 @@ Article.update(
   //function
 
     function(err){
-      if(err){res.send(err);}else{res.send("Successfully updated article");}
+      if(err){res.send(err + " this is the error ");}else{res.send("Successfully updated article");}
     }
 
 );
