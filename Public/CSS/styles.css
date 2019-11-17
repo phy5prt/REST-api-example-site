@@ -2,3 +2,34 @@
 td{border-width: 5px !important; border-color:grey !important;}
 tr{border-width: 5px !important; border-color:grey !important;}
 th{border-width: 5px !important; border-color:grey !important;} */
+/*
+.blueCellBorder{
+  border-top:    medium solid var(--primary) !important;
+  border-right:  medium solid var(--primary) !important;
+  /* border-left: medium solid var(--primary) !important; }*/
+
+
+/*
+.greenCellBorder{
+  border-top:    medium solid var(--success) !important;
+  border-right:  medium solid var(--success) !important; */
+  /* border-left: medium solid var(--success) !important; */
+
+  /*
+}
+ .yellowCellBorder{
+
+    border-top:    medium solid var(--warning) !important;
+    border-right:  medium solid var(--warning) !important; */
+    /* border-left: medium solid var(--warning) !important; */
+  /* }
+      .orangeCellBorder{
+        border-top:    medium solid orange !important;
+        border-right:  medium solid orange !important; */
+        /* border-left: medium solid orange !important; */
+      /* }
+          .redCellBorder{
+            border-top:    medium solid var(--danger) !important;
+            border-right:  medium solid var(--danger) !important; */
+            /* border-left: medium solid var(--danger) !important; */
+          /* }  */

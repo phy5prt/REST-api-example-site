@@ -124,7 +124,7 @@ Article.update(
     {title:req.params.articleTitle},
     {$set: req.body},
     function(err){
-      if(err){res.send(err);}else{res.send("Succesfully updated the article (if it existed)");}
+      if(err){res.send(err);}else{res.send("Succesfully updated the article ");}
 
     }
   );

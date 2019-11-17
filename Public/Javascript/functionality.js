@@ -48,12 +48,12 @@ $.ajax({
     success: function(result)
     {
       alert(JSON.stringify(result));
-      $('#getAnArticleTitleInput').focus();
+      $('#getSpecificArticle').focus();
     $("form").each(function(i){$(this)[0].reset();});
 },
 error:function(result)  {
     alert(JSON.stringify(result));
-    $('#getAnArticleTitleInput').focus();
+    $('#getSpecificArticle').focus();
         $("form").each(function(i){$(this)[0].reset();});
 }
 });
@@ -99,13 +99,13 @@ $.ajax({
     {
 
       alert(JSON.stringify(result));
-      $('#getAnArticleTitleInput').focus();
+      $('#getSpecificArticle').focus();
         $("form").each(function(i){$(this)[0].reset();});
 },
 error:function(result)  {
 
     alert(JSON.stringify(result));
-    $('#getAnArticleTitleInput').focus();
+    $('#getSpecificArticle').focus();
     $("form").each(function(i){$(this)[0].reset();});
 }
 });
@@ -151,13 +151,13 @@ $.ajax({
     {
 
       alert(JSON.stringify(result));
-      $('#getAnArticleTitleInput').focus();
+      $('#getSpecificArticle').focus();
         $("form").each(function(i){$(this)[0].reset();});
 },
 error:function(result)  {
 
     alert(JSON.stringify(result));
-    $('#getAnArticleTitleInput').focus();
+    $('#getSpecificArticle').focus();
     $("form").each(function(i){$(this)[0].reset();});
 }
 });
@@ -196,13 +196,13 @@ $.ajax({
     {
 
       alert(JSON.stringify(result));
-      $('#getAnArticleTitleInput').focus();
+      $('#getSpecificArticle').focus();
         $("form").each(function(i){$(this)[0].reset();});
 },
 error:function(result)  {
 
     alert(JSON.stringify(result));
-    $('#getAnArticleTitleInput').focus();
+    $('#getSpecificArticle').focus();
     $("form").each(function(i){$(this)[0].reset();});
 }
 });
@@ -219,13 +219,13 @@ $.ajax({
     {
 
       alert(JSON.stringify(result));
-      $('#getAnArticleTitleInput').focus();
+      $('#getSpecificArticle').focus();
         $("form").each(function(i){$(this)[0].reset();});
 },
 error:function(result)  {
 
     alert(JSON.stringify(result));
-    $('#getAnArticleTitleInput').focus();
+    $('#getSpecificArticle').focus();
     $("form").each(function(i){$(this)[0].reset();});
 }
 });

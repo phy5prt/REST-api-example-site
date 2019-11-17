@@ -68,14 +68,14 @@
             GET
 
           </th>
-          <td><form action="/articles" method="GET" target="_blank"><button type="submit" class="btn btn-primary btn-block">Fetch all articles</button></form> </td>
-          <td class="w-100">
+          <td class="blueCellBorder"><form action="/articles" method="GET" target="_blank"><button type="submit" class="btn btn-primary btn-block">Fetch all articles</button></form> </td>
+          <td class="w-100 blueCellBorder">
             <!-- <form action="/articles/API" method="GET" class="form-inline w-100">  -->
           <!-- <form action="/articles/?params=articleTitle" method="GET" class="form-inline w-100">  -->
           <form action="/articles/" method="GET" class="form-inline w-100" target="_blank" id="getArticleform">
             <div class="form-group w-50">
 
-<input type="text" name="articleTitle" value="article's title" required id="getSpecificArticle" class="form-control w-100"></div>
+<input type="text" name="articleTitle" value="article's title" onfocus="this.value=''" required id="getSpecificArticle" class="form-control w-100"></div>
 <div class="w-50" ><button type="submit" class="btn  btn-primary btn-block w-100" id="submitForGetAnArticleInput">Fetch specific article</button></div>
 </form>
 </td>
@@ -86,15 +86,15 @@
         POST
 
           </th>
-          <td>  <form action="/articles/ " method="post" class="form-inline w-100" id="postForm">
+          <td class="greenCellBorder">  <form action="/articles/ " method="post" class="form-inline w-100" id="postForm">
 
 
-<input type="text" name="title" value="new article's title" required id="postAnArticleTitleInput" class="form-control w-50">
-<input type="text" name="content" value="new article's content" required id="postAnArticleContentInput" class="form-control w-50">
+<input type="text" name="title" value="new article's title" onfocus="this.value=''" required id="postAnArticleTitleInput" class="form-control w-50">
+<input type="text" name="content" value="new article's content" onfocus="this.value=''" required id="postAnArticleContentInput" class="form-control w-50">
 
 <button type="submit" class="btn  btn-success btn-block form-control w-100" id="submitForPostAnArticleInput">Insert new article</button>
 </form></td>
-          <td class="text-warning">N/A</td>
+          <td class="text-warning greenCellBorder">N/A</td>
 
 
         </tr>
@@ -103,17 +103,17 @@
         PUT
 
           </th>
-    <td class="text-warning">N/A</td>
+    <td class="text-warning orangeCellBorder">N/A</td>
 
-          <td>
+          <td class="text-warning orangeCellBorder">
               <form  id="putForm" action="/articles/" method="Put" class="form-inline w-100" >
             <!-- <form action="/articles/ " method="put" class="form-inline w-100"> -->
             <div class="form-group w-100">
 
-<input type="text" name="existingArticleTitle" value=" article to replace's title" required id="putArticleToReplace" class="form-control w-50">
-<input type="text" name="title" value=" article's new title" required id="putReplaceTitleInput" class="form-control w-50"></div>
+<input type="text" name="existingArticleTitle" onfocus="this.value=''" value="title of article to replace" required id="putArticleToReplace" class="form-control w-50">
+<input type="text" name="title" value=" article's new title"  onfocus="this.value=''" required id="putReplaceTitleInput" class="form-control w-50"></div>
 <div class="form-group w-100">
-<input type="text" name="content" value="article's new content" required id="putReplaceContentInput" class="form-control w-50">
+<input type="text" name="content" value="article's new content" onfocus="this.value=''" required id="putReplaceContentInput" class="form-control w-50">
 <button type="submit" class="btn   btn-block form-control w-50" style="background:orange;" id="submitForPutAnArticleInput">replace article with it's update</button></div>
 </div></form></td>
 
@@ -126,11 +126,11 @@
 
 
           </th>
-                <td class="text-warning">N/A</td>
+                <td class="text-warning yellowCellBorder">N/A</td>
 
-          <td><form action="/articles/" method="patch" id="patchForm" class="form-inline w-100">
-<input type="text" name="articleTitle" value=" article to replace's title" required id="patchArticleToPatch" class="form-control w-100">
-<hr style="width: 100%; color: black; height: 1px; background-color:grey;" />
+          <td class="yellowCellBorder py-4"> <form action="/articles/" method="patch" id="patchForm" class="form-inline w-100">
+<input type="text" name="articleTitle" value="title of article to replace" onfocus="this.value=''" required id="patchArticleToPatch" class="form-control w-100">
+<!-- <hr style="width: 100%; color: black; height: 1px; background-color:grey;" /> -->
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
 
 
@@ -142,15 +142,15 @@
 
         <input type="radio"  id="optionTitle" autocomplete="off" checked > Change title
       </label>
-<input type="text" name="title" value=" article's new title" required id="patchReplaceTitleInput" class="form-control w-100">
+<input type="text" name="title" onfocus="this.value=''" value=" article's new title" required id="patchReplaceTitleInput" class="form-control w-100">
 </div>
 <div class=" form-group  w-50 btn-group-toggle">
   <label class="btn btn-secondary btn-block "id="optionContentLable">
     <input type="radio"  id="optionContent" autocomplete="off"> Or content
   </label>
-<input type="text" name="content" value="article's new content" required id="patchReplaceContentInput" class="form-control w-100">
+<input type="text" onfocus="this.value=''" name="content" value="article's new content" required id="patchReplaceContentInput" class="form-control w-100">
 </div></div>
-<hr style="width: 100%; color: black; height: 1px; background-color:grey;" />
+<!-- <hr style="width: 100%; color: black; height: 1px; background-color:grey;" /> -->
 <button type="submit" class="btn  btn-warning btn-block form-control w-100" id="submitForPutAnArticleInput">replace article element with it's updated element</button></div>
 </div></form></td>
 
@@ -160,12 +160,12 @@
 DELETE
 
           </th>
-          <td ><form action="/articles/" id="deleteAllArticlesForm" method="GET"><button type="submit" class="btn btn-danger btn-block" >Delete all articles</button></form> </td>
-          <td class="w-100">
+          <td class="redCellBorder"><form action="/articles/" id="deleteAllArticlesForm" method="GET"><button type="submit" class="btn btn-danger btn-block" >Delete all articles</button></form> </td>
+          <td class="w-100 redCellBorder">
             <form action="/articles/" method="GET" class="form-inline w-100" id="deleteArticleForm">
             <div class="form-group w-50">
 
-<input type="text" name="articleTitle" value="article's title" required id="deleteArticle" class="form-control w-100"></div>
+<input type="text" name="articleTitle" onfocus="this.value=''" value="article's title" required id="deleteArticle" class="form-control w-100"></div>
 <div class="w-50" ><button type="submit" class="btn  btn-danger btn-block w-100" id="submitForDeleteAnArticleInput">Delete specific article</button></div>
 </form></td>
 
@@ -175,7 +175,7 @@ DELETE
       </tbody>
     </table>
 
-    <small >This example is deliberately simple so that it shows clearly the REST api. After making changes to the data press "GET" to see the changes. If you would like to see the data returned in an more legiable form chrome tools json viewer is a useful addon. It is case sensitive. </small>
+    <small >This example is deliberately simple so that it shows clearly the REST api. After making changes to the data press "GET" to see the changes. It is case sensitive. If you would like to see the data returned in an more legible form chrome tools json viewer is a good tool for viewing JSONs.  </small>
 
 </div>
 
