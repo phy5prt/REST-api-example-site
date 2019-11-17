@@ -8,7 +8,7 @@ const ejs = require("ejs");
 const app = express();
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({extended:true}));
-app.use(express.static("public"));
+app.use(express.static("Public"));
 
 
 mongoose.connect("mongodb+srv://phy5prtAdmin:"+process.env.PASSWORD_ATLASDB+"@cluster0-su305.mongodb.net/wikiDB", {useNewUrlParser:true});
