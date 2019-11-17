@@ -88,7 +88,7 @@ postArticleAjax(value);
 
 function putArticleAjax(submitData){
 
-
+e.PreventDefault();
 
 $.ajax({
     type:"put",
@@ -109,6 +109,8 @@ error:function(result)  {
     $("form").each(function(i){$(this)[0].reset();});
 }
 });
+
+return false;
 }
 
 // putArticleAjaxOld('API','replace api title with this OLD!!',"api content now this OLD!!!");
@@ -122,7 +124,7 @@ $(function () {
 
 
   $("#putForm").on('submit', function (submitClick) {
-e.PreventDefault(); //trying this to stop the error {"readyState":0,"status":0,"statusText":"error"}
+ //trying this to stop the error {"readyState":0,"status":0,"statusText":"error"}
 putArticleAjax($(this).serialize());
     return false;
 
