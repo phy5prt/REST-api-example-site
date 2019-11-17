@@ -88,7 +88,7 @@ postArticleAjax(value);
 
 function putArticleAjax(submitData){
 
-e.PreventDefault();
+
 
 $.ajax({
     type:"put",
