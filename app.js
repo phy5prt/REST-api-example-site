@@ -13,6 +13,7 @@ app.use(express.static("public"));
 
 mongoose.connect("mongodb+srv://phy5prtAdmin:"+process.env.PASSWORD_ATLASDB+"@cluster0-su305.mongodb.net/wikiDB", {useNewUrlParser:true});
 
+
 const articleSchema={
 title: String,
 content:String

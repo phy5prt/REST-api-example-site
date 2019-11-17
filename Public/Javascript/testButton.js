@@ -1,4 +1,5 @@
 $("#test").click(
+function(){  alert("the javascript has been found");}
 
 //Get works if put articleValue in
 // function(){
