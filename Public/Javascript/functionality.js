@@ -42,7 +42,7 @@ $('#getArticleform').submit(function(){
 function postArticleAjax(theArticle){
 $.ajax({
     type:"post",                   //"PATCH",
-    url: "http://localhost:3000/articles/",
+    url: "/articles/",
   data: theArticle,
    dataType:"json",
     success: function(result)
@@ -147,7 +147,7 @@ function patchArticleAjax(submitData){
 
 $.ajax({
     type:"patch",
-    url: "http://localhost:3000/articles/"+$("#patchArticleToPatch").val(), //if i dont do this hack need to somehow deserialize data and turn in javascript object
+    url: "/articles/"+$("#patchArticleToPatch").val(), //if i dont do this hack need to somehow deserialize data and turn in javascript object
   data: submitData,
    dataType:"json",
     success: function(result)
@@ -193,7 +193,7 @@ function deleteAllArticlesAjax(){
 
 $.ajax({
     type:"delete",
-    url: "http://localhost:3000/articles/", //if i dont do this hack need to somehow deserialize data and turn in javascript object
+    url: "/articles/", //if i dont do this hack need to somehow deserialize data and turn in javascript object
 
     success: function(result)
     {
@@ -216,7 +216,7 @@ function deleteSpecificArticleAjax(){
 
 $.ajax({
     type:"delete",
-    url: "http://localhost:3000/articles/"+$("#deleteArticle").val(), //if i dont do this hack need to somehow deserialize data and turn in javascript object
+    url: "/articles/"+$("#deleteArticle").val(), //if i dont do this hack need to somehow deserialize data and turn in javascript object
 
     success: function(result)
     {
